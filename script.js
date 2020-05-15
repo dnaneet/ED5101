@@ -15,7 +15,7 @@ $(document).ready(function() {
   var POINT_RADIUS = 5; // radius of each data point
 
   var X_AXIS = 'Median Household Income, USD';  // x-axis label and label in tooltip
-  var Y_AXIS = 'Grade, Relative to Average'; // y-axis label and label in tooltip
+  var Y_AXIS = 'Grade'; // y-axis label and label in tooltip
 
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
