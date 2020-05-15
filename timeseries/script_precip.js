@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var TITLE = 'Temperature and precipitation data';
 
-  var POINT_X = 'date'; // column name for x values in data.csv
+  var POINT_X = 'month'; // column name for x values in data.csv
   var POINT_X_PREFIX = ''; // prefix for x values, eg '$'
   var POINT_X_POSTFIX = ''; // postfix for x values, eg '%'
 
