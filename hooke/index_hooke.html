@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Tensile test plots</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!-- Load jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Load Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+
+    <!-- Load D3.js to read csv files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+  </head>
+
+  <body>
+    <h3>Classify the material by identifying the characteristics of the stress-strain curves depicted</h3>
+    <h4>You may use the data tables in your textbook or a different peer-reviewed source</h4>
+
+    <canvas id="stress-strain-linear-linear" style="width:100%; height:400px;"></canvas>
+    <canvas id="stress-strain-al" style="width:100%; height:400px;"></canvas>
+
+    <p style="font-family: Helvetica; color: #333; padding: 1em 2em; font-size: 12px">
+      Data sources:
+      <ul>
+        <li style="font-family: Helvetica; color: #333; font-size:12px"> MEEM3000 <a href="./hooke.csv">tensile test data</a>, Dr Ibrahim Miskioglu, Associate Professor, mechanical engineering-engineering mechanics, Michigan Tech</li>
+        <li style="font-family: Helvetica; color: #333; font-size:12px"> <a href="http://mtil.illinois.edu/DATA/Courses/Spring%202020/ME330/">Tensile stress and strain</a> data from Granger college of engineering </li>
+      <br>
+    </p>
+    <!--<script src="./script.js"></script>-->
+    <script src="./script_hooke.js"></script>
+    <script src="./script_hooke_aluminum.js"></script>
+    <!--<script src="./script_hooke_semilogx.js"></script>-->
+
+  </body>
+
+</html>
