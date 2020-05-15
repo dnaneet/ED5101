@@ -2,9 +2,9 @@ $(document).ready(function() {
 
   var TITLE = 'Temperature and precipitation data';
 
-  var POINT_X = 'month'; // column name for x values in data.csv
+  var POINT_X = 'date'; // column name for x values in data.csv
   var POINT_X_PREFIX = ''; // prefix for x values, eg '$'
-  var POINT_X_POSTFIX = ' (number)'; // postfix for x values, eg '%'
+  var POINT_X_POSTFIX = ''; // postfix for x values, eg '%'
 
   var POINT_Y = 'temperature'; // column name for y values in data.csv
   var POINT_Y_PREFIX = ''; // prefix for x values, eg 'USD '
@@ -12,15 +12,15 @@ $(document).ready(function() {
 
   var POINT_NAME = 'precipitation'; // point names that appear in tooltip
   var POINT_COLOR = 'rgba(0,0,255,0.7)'; // point color, eg `black` or `rgba(10, 100, 44, 0.8)`
-  var POINT_RADIUS = 5; // radius of each data point
+  var POINT_RADIUS = 15; // radius of each data point
 
-  var X_AXIS = 'Month Number';  // x-axis label and label in tooltip
+  var X_AXIS = 'Date';  // x-axis label and label in tooltip
   var Y_AXIS = 'Temperature'; // y-axis label and label in tooltip
 
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
   // Read data file and create a chart
-  d3.csv('./precipitation.csv').then(function(rows) {
+  d3.csv('./precipitation_ts.csv').then(function(rows) {
 
     var data = rows.map(function(row) {
       return {
