@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-  var TITLE = 'Income and Test Scores in Connecticut School Districts, 2009-13';
+  var TITLE = 'Temperature and precipitation data';
 
   var POINT_X = 'month'; // column name for x values in data.csv
-  var POINT_X_PREFIX = '(number)'; // prefix for x values, eg '$'
-  var POINT_X_POSTFIX = ''; // postfix for x values, eg '%'
+  var POINT_X_PREFIX = ''; // prefix for x values, eg '$'
+  var POINT_X_POSTFIX = ' (number)'; // postfix for x values, eg '%'
 
   var POINT_Y = 'temperature'; // column name for y values in data.csv
   var POINT_Y_PREFIX = ''; // prefix for x values, eg 'USD '
