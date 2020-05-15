@@ -55,9 +55,10 @@ $(document).ready(function() {
         },
         scales: {
           xAxes: [{
-            scaleLabel: {
-              display: true,
-              labelString: X_AXIS
+		  type: time,
+            		scaleLabel: {
+              			display: true,
+              			labelString: X_AXIS
             },
             gridLines: {
               display: SHOW_GRID,
