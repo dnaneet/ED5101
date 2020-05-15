@@ -2,25 +2,25 @@ $(document).ready(function() {
 
   var TITLE = 'Tenile test data';
 
-  var POINT_X = 'strain'; // column name for x values in data.csv
+  var POINT_X = 'month'; // column name for x values in data.csv
   var POINT_X_PREFIX = ''; // prefix for x values, eg '$'
   var POINT_X_POSTFIX = ' (in/in)'; // postfix for x values, eg '%'
 
-  var POINT_Y = 'stress'; // column name for y values in data.csv
+  var POINT_Y = 'temperature'; // column name for y values in data.csv
   var POINT_Y_PREFIX = ''; // prefix for x values, eg 'USD '
   var POINT_Y_POSTFIX = ' (ksi)'; // postfix for x values, eg ' kg'
 
-  var POINT_NAME = 'stress'; // point names that appear in tooltip
+  var POINT_NAME = 'temperature'; // point names that appear in tooltip
   var POINT_COLOR = 'rgba(0,0,255,0.7)'; // point color, eg `black` or `rgba(10, 100, 44, 0.8)`
   var POINT_RADIUS = 5; // radius of each data point
 
-  var X_AXIS = 'strain';  // x-axis label and label in tooltip
-  var Y_AXIS = 'stress'; // y-axis label and label in tooltip
+  var X_AXIS = 'month';  // x-axis label and label in tooltip
+  var Y_AXIS = 'temperature'; // y-axis label and label in tooltip
 
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
   // Read data file and create a chart
-  d3.csv('./hooke_small.csv').then(function(rows) {
+  d3.csv('./precipitation.csv').then(function(rows) {
 
     var data = rows.map(function(row) {
       return {
