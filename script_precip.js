@@ -26,7 +26,7 @@ $(document).ready(function() {
       return {
         x: row[POINT_X],
         y: row[POINT_Y],
-        name: row[POINT_X]
+        name: row[POINT_NAME]
       }
     })
 
