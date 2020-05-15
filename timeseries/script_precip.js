@@ -20,7 +20,7 @@ $(document).ready(function() {
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
   // Read data file and create a chart
-  d3.csv('./precipitation_ts.csv').then(function(rows) {
+  d3.csv('./precipitation.csv').then(function(rows) {
 
     var data = rows.map(function(row) {
       return {
@@ -55,10 +55,9 @@ $(document).ready(function() {
         },
         scales: {
           xAxes: [{
-		  type: time,
-            		scaleLabel: {
-              			display: true,
-              			labelString: X_AXIS
+		  scaleLabel: {
+              	  display: true,
+              	  labelString: X_AXIS
             },
             gridLines: {
               display: SHOW_GRID,
