@@ -18,7 +18,8 @@
 
       // Simple asynchronous function that prints the test.csv data
       async function printData() {
-       const response = await fetch('./test.csv');
+       // const response = await fetch('./test.csv');
+       const response = await fetch('./ZonAnn.Ts+dSST.csv');
        const data = await response.text();
        console.log(data)
        }
