@@ -17,12 +17,13 @@
       // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
 
       window.addEventListener('load', setup);
+      // Simple asynchronous function that prints the test.csv data
       async function printData() {
        const response = await fetch('./test.csv');
        const data = await response.text();
        console.log(data)
        }
-      printData();
+      //printData(); //loads the function printData().  This should be commented out in production.
       
       async function getData() {
         const response = await fetch('./test.csv');
@@ -40,6 +41,7 @@
         //return { years, temps };
         return console.log(years)
       }
+      getData();
     </script>
   </body>
 </html>
