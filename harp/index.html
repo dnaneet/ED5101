@@ -18,7 +18,7 @@
       // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
       // List of random names can be generated via: http://listofrandomnames.com/index.cfm?textarea
       
-      
+      /*
       window.addEventListener('load', setup);
 
       async function setup() {
@@ -42,7 +42,7 @@
           options: {}
         });
       }
-      
+      */ 
       async function getData() {
         // const response = await fetch('testdata.csv');
         const response = await fetch('./sample.csv');
@@ -58,11 +58,12 @@
           //q3.push(parseFloat(cols[3]));
           //temp.push(parseFloat(row[0]))
           //console.log(row)
-          temp.push(parseFloat(col))
+          //temp.push(parseFloat(col))
+          consolelog(col)
         });
         return { temp };
       }
-      //getData();
+      getData();
     </script>
   </body>
 </html>
