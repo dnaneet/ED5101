@@ -33,7 +33,7 @@
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                borderWidth: 1
+                borderWidth: 2
               },
               {
                 label: 'Northern Hemisphere Temperature in °C',
@@ -41,7 +41,7 @@
                 fill: false,
                 borderColor: 'rgba(99, 132, 255, 1)',
                 backgroundColor: 'rgba(99, 132, 255, 0.5)',
-                borderWidth: 1
+                borderWidth: 2
               },
               {
                 label: 'Souther Hemisphere in °C',
@@ -49,7 +49,7 @@
                 fill: false,
                 borderColor: 'rgba(99, 255, 132, 1)',
                 backgroundColor: 'rgba(99, 255, 132, 0.5)',
-                borderWidth: 1
+                borderWidth: 2
               }
             ]
           },
@@ -59,7 +59,7 @@
 
       async function getData() {
         // const response = await fetch('testdata.csv');
-        const response = await fetch('ZonAnn.Ts+dSST.csv');
+        const response = await fetch('./ZonAnn.Ts+dSST.csv');
         const data = await response.text();
         const years = [];
         const temps = [];
