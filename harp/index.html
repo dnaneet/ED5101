@@ -33,8 +33,7 @@
         const dataTemp = await getData();
         const myChart = new Chart(ctx, {
           type: 'line',
-          data: {
-            //labels: dataScore.name,
+          data: {            
             datasets: [
               {
                 label: 'Temperature',
@@ -50,27 +49,19 @@
         });
       }
        
-      async function getData() {
-        // const response = await fetch('testdata.csv');
+      async function getData() {        
         const response = await fetch('./sample.csv');
-        const data = await response.text();
-        //const name = [];
+        const data = await response.text();        
         const temp = [];        
         const rows = data.split('\n').slice(1);
         rows.forEach(row => {
-          const col = row.split(',');
-          //name.push(cols[0]);
-          //q1.push(parseFloat(cols[1]));
-          //q2.push(parseFloat(cols[2]));
-          //q3.push(parseFloat(cols[3]));
-          //temp.push(parseFloat(row[0]))
-          //console.log(row)
+          const col = row.split(',');          
           temp.push(parseFloat(col[0]))
-          console.log(col[0])
+          //console.log(col[0]) //for debugging purpose
         });
         return { temp };
       }
-      //getData();
+      //getData(); for debugging purpose
     </script>
   </body>
 </html>
