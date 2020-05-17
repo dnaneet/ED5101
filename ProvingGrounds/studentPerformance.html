@@ -16,14 +16,14 @@
     <script>
       // Data from: https://data.giss.nasa.gov/gistemp/
       // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
-
+      // List of random names can be generated via: http://listofrandomnames.com/index.cfm?textarea
       window.addEventListener('load', setup);
 
       async function setup() {
         const ctx = document.getElementById('myChart').getContext('2d');
         const dataScore = await getData();
         const myChart = new Chart(ctx, {
-          type: 'line',
+          type: 'scatter',
           data: {
             labels: dataScore.name,
             datasets: [
