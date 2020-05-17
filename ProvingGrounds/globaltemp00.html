@@ -18,20 +18,20 @@
 
       // Simple asynchronous function that prints the test.csv data
       async function printData() {
-       // const response = await fetch('./test.csv');
-       const response = await fetch('./ZonAnn.Ts+dSST.csv');
+       const response = await fetch('./test.csv');
+       // const response = await fetch('./ZonAnn.Ts+dSST.csv');
        const data = await response.text();
        const rows = data.split('\n').slice(1)
        rows.forEach(row => {
-         console.log(rows)
+         console.log(rows[0])
        });
        
        }
        printData(); //loads the function printData().  This should be commented out in production.
       
       async function getData() {
-        //const response = await fetch('./test.csv');
-        const response = await fetch('ZonAnn.Ts+dSST.csv');
+        const response = await fetch('./test.csv');
+        //const response = await fetch('ZonAnn.Ts+dSST.csv');
         const data = await response.text();
         const years = [];
         const temps = [];
