@@ -20,6 +20,19 @@
       
       
       window.addEventListener('load', setup);
+      
+      var options = {
+	    scales: {
+		    xAxes: [{
+			    display: false
+		          }],
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+                    }
+              }]
+	           }
+            };
 
       async function setup() {
         const ctx = document.getElementById('myChart').getContext('2d');
