@@ -47,7 +47,7 @@
         // const response = await fetch('testdata.csv');
         const response = await fetch('./sample.txt');
         const data = await response.text();
-        const name = [];
+        //const name = [];
         const temp = [];        
         const rows = data.split('\n').slice(1);
         rows.forEach(row => {
