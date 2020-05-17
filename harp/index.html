@@ -45,20 +45,20 @@
       
       async function getData() {
         // const response = await fetch('testdata.csv');
-        const response = await fetch('./sample.txt');
+        const response = await fetch('./sample.csv');
         const data = await response.text();
         //const name = [];
         const temp = [];        
         const rows = data.split('\n').slice(1);
         rows.forEach(row => {
-          //const cols = row.split(',');
+          const col = row.split(',');
           //name.push(cols[0]);
           //q1.push(parseFloat(cols[1]));
           //q2.push(parseFloat(cols[2]));
           //q3.push(parseFloat(cols[3]));
           //temp.push(parseFloat(row[0]))
           //console.log(row)
-          temp.push(parseFloat(row))
+          temp.push(parseFloat(col))
         });
         return { temp };
       }
