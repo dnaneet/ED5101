@@ -21,11 +21,11 @@
        //const response = await fetch('./test.csv');
        const response = await fetch('./ZonAnn.Ts+dSST.csv');
        const data = await response.text();
-       const rows = data.split('\n').slice(1)
-       rows.forEach(element => {
-         const row = element.split(',');
-         const year = row[0];
-         const temp = row[1];
+       const table = data.split('\n').slice(1)
+       table.forEach(row => {
+         const column = element.split(',');
+         const year = column[0];
+         const temp = column[1];
          console.log(year, temp)
        });
        
