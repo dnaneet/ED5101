@@ -17,8 +17,12 @@
       // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
 
       //window.addEventListener('load', setup);
-      const response = await fetch('./test.csv')
-      console.log(response)
+      async function printData(){
+       const response = await fetch('./test.csv');
+       const data = await response.text();
+       console.log(data)
+       }
+      printData();
       
       async function getData() {
         const response = await fetch('./test.csv');
