@@ -21,7 +21,7 @@
       
       window.addEventListener('load', setup);
       
-      var options = {
+      var ops = {
 	    scales: {
 		    xAxes: [{
 			    display: false
@@ -45,6 +45,7 @@
               {
                 label: 'Temperature',
                 data: dataTemp.temp,
+		options: ops,
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.85)',
