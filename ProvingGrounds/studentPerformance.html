@@ -21,15 +21,15 @@
 
       async function setup() {
         const ctx = document.getElementById('myChart').getContext('2d');
-        const dataTemps = await getData();
+        const dataScore = await getData();
         const myChart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: dataTemps.years,
+            labels: dataScore.name,
             datasets: [
               {
                 label: 'Problem 1',
-                data: dataTemps.temps,
+                data: dataScore.q1,
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
@@ -37,7 +37,7 @@
               },
               {
                 label: 'Problem 2',
-                data: dataTemps.northern,
+                data: dataScore.q2,
                 fill: false,
                 borderColor: 'rgba(99, 132, 255, 1)',
                 backgroundColor: 'rgba(99, 132, 255, 0.5)',
@@ -45,7 +45,7 @@
               },
               {
                 label: 'Problem 3',
-                data: dataTemps.southern,
+                data: dataScore.q3,
                 fill: false,
                 borderColor: 'rgba(99, 255, 132, 1)',
                 backgroundColor: 'rgba(99, 255, 132, 0.5)',
@@ -59,21 +59,21 @@
 
       async function getData() {
         // const response = await fetch('testdata.csv');
-        const response = await fetch('./ZonAnn.Ts+dSST.csv');
+        const response = await fetch('./quiz.csv');
         const data = await response.text();
-        const years = [];
-        const temps = [];
-        const northern = [];
-        const southern = [];
+        const name = [];
+        const q1 = [];
+        const q2 = [];
+        const q3 = [];
         const rows = data.split('\n').slice(1);
         rows.forEach(row => {
           const cols = row.split(',');
-          years.push(cols[0]);
-          temps.push(14 + parseFloat(cols[1]));
-          northern.push(14 + parseFloat(cols[2]));
-          southern.push(14 + parseFloat(cols[3]));
+          name.push(cols[0]);
+          q1.push(parseFloat(cols[1]));
+          q2.push(parseFloat(cols[2]));
+          q3.push(parseFloat(cols[3]));
         });
-        return { years, temps, northern, southern };
+        return { name, q1, q2, q3 };
       }
     </script>
   </body>
