@@ -18,67 +18,50 @@
       // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
       // List of random names can be generated via: http://listofrandomnames.com/index.cfm?textarea
       
-      /*
+      
       window.addEventListener('load', setup);
 
       async function setup() {
         const ctx = document.getElementById('myChart').getContext('2d');
-        const dataScore = await getData();
+        const dataTemp = await getData();
         const myChart = new Chart(ctx, {
           type: 'line',
           data: {
             labels: dataScore.name,
             datasets: [
               {
-                label: 'Problem 1',
-                data: dataScore.q1,
+                label: 'Temperature',
+                data: dataTemp.temp,
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.85)',
                 borderWidth: 2
-              },
-              {
-                label: 'Problem 2',
-                data: dataScore.q2,
-                fill: false,
-                borderColor: 'rgba(99, 132, 255, 1)',
-                backgroundColor: 'rgba(99, 132, 255, 0.85)',
-                borderWidth: 2
-              },
-              {
-                label: 'Problem 3',
-                data: dataScore.q3,
-                fill: false,
-                borderColor: 'rgba(99, 255, 132, 1)',
-                backgroundColor: 'rgba(99, 255, 132, 0.85)',
-                borderWidth: 2
-              }
+              }              
             ]
           },
           options: {}
         });
       }
-      */
+      
       async function getData() {
         // const response = await fetch('testdata.csv');
         const response = await fetch('./sample.txt');
         const data = await response.text();
         const name = [];
-        const q1 = [];
-        const q2 = [];
-        const q3 = [];
+        const temp = [];        
         const rows = data.split('\n').slice(1);
         rows.forEach(row => {
           //const cols = row.split(',');
           //name.push(cols[0]);
           //q1.push(parseFloat(cols[1]));
           //q2.push(parseFloat(cols[2]));
-         //q3.push(parseFloat(cols[3]));
+          //q3.push(parseFloat(cols[3]));
+          temp.push(parseFloat(cols[0]))
           console.log(row)
         });
-        return { name, q1, q2, q3 };
+        return { temp };
       }
-      getData();
+      //getData();
     </script>
   </body>
 </html>
