@@ -23,16 +23,16 @@
        const data = await response.text();
        console.log(data)
        }
-       printData(); //loads the function printData().  This should be commented out in production.
+       //printData(); //loads the function printData().  This should be commented out in production.
       
       async function getData() {
-        const response = await fetch('./test.csv');
-        //const response = await fetch('ZonAnn.Ts+dSST.csv');
+        //const response = await fetch('./test.csv');
+        const response = await fetch('ZonAnn.Ts+dSST.csv');
         const data = await response.text();
         const years = [];
         const temps = [];
         const rows = data.split('\n').slice(1);
-        
+        console.log(rows)
         rows.forEach(row => {
           const cols = row.split(',');
           years.push(cols[0]);
@@ -41,7 +41,7 @@
         return { years, temps };
         // return console.log(years)
       }
-      
+      getData();
     </script>
   </body>
 </html>
