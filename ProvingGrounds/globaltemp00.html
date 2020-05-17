@@ -15,8 +15,31 @@
     <script>
       // Data from: https://data.giss.nasa.gov/gistemp/
       // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
+      
+      async function setup() {
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const globalTemps = await getData();
+        const myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: globalTemps.years,
+            datasets: [
+              {
+                label: 'Temperature in Celcius',
+                data: globalTemps.temps,
+                fill: false,
+                borderColor: 'rgba(255, 99, 132, 1)',
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                borderWidth: 1
+              }
+            ]
+          },
+          options: {}
+        });
+      }
 
       // Simple asynchronous function that prints the test.csv data
+      /*
       async function printData() {
        //const response = await fetch('./test.csv');
        const response = await fetch('./ZonAnn.Ts+dSST.csv');
@@ -36,7 +59,7 @@
        
        }
        printData(); //loads the function printData().  This should be commented out in production.
-      
+      */
       async function getData() {
         const response = await fetch('./test.csv');
         //const response = await fetch('ZonAnn.Ts+dSST.csv');
