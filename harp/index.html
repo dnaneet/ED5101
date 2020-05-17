@@ -17,6 +17,8 @@
       // Data from: https://data.giss.nasa.gov/gistemp/
       // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
       // List of random names can be generated via: http://listofrandomnames.com/index.cfm?textarea
+      
+      /*
       window.addEventListener('load', setup);
 
       async function setup() {
@@ -56,10 +58,10 @@
           options: {}
         });
       }
-
+      */
       async function getData() {
         // const response = await fetch('testdata.csv');
-        const response = await fetch('./quiz.csv');
+        const response = await fetch('./sample.txt');
         const data = await response.text();
         const name = [];
         const q1 = [];
@@ -67,14 +69,16 @@
         const q3 = [];
         const rows = data.split('\n').slice(1);
         rows.forEach(row => {
-          const cols = row.split(',');
-          name.push(cols[0]);
-          q1.push(parseFloat(cols[1]));
-          q2.push(parseFloat(cols[2]));
-          q3.push(parseFloat(cols[3]));
+          //const cols = row.split(',');
+          //name.push(cols[0]);
+          //q1.push(parseFloat(cols[1]));
+          //q2.push(parseFloat(cols[2]));
+         //q3.push(parseFloat(cols[3]));
+          console.log(row)
         });
         return { name, q1, q2, q3 };
       }
+      getData();
     </script>
   </body>
 </html>
