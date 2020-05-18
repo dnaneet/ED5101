@@ -40,13 +40,21 @@
 	    labels: dataTemp.timestamp,
             datasets: [
               {
-                label: 'Temperature',
+                label: 'Temperature (C)',
                 data: dataTemp.temp,		
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.85)',
                 borderWidth: 4
-              }              
+              },
+	      {
+                label: 'Relative Humidity (%)',
+                data: dataTemp.humid,		
+                fill: false,
+                borderColor: 'rgba(99, 123, 255, 1)',
+                backgroundColor: 'rgba(99, 123, 255, 0.85)',
+                borderWidth: 4
+              }		    
             ]
           },
          options: ops
