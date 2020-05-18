@@ -17,7 +17,7 @@
     <script>
       // Data from: Raspberry Pi Hat     
       
-      /*
+      
       window.addEventListener('load', setup);      
       var ops = {
 	    scales: {
@@ -45,14 +45,14 @@
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.85)',
-                borderWidth: 2
+                borderWidth: 4
               }              
             ]
           },
          options: ops
         });
       }
-      */ 
+      
       async function getData() {        
         const response = await fetch('./20-05-18.data.csv');
         const data = await response.text();     
