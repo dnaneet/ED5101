@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Harp Temperature and RH</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+  <body>
+    <h1>Harp comfort</h1>
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+
+
+    <script>
+      // Data from: Raspberry Pi Hat     
+      
+      window.addEventListener('load', setup);      
+      var ops = {
+	    scales: {
+		    xAxes: [{
+			    display: true
+		          }],
+        	    yAxes: [{
+            		    ticks: {
+                		    beginAtZero: true
+                    		   }
+              		   }]
+	           }
+              };
+      async function setup() {
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const dataTemp = await getData();
+        const myChart = new Chart(ctx, {
+          type: 'line',
+          data: {   
+	    labels: dataTemp.timestamp,
+            datasets: [
+              {
+                label: 'Temperature',
+                data: dataTemp.temp,		
+                fill: false,
+                borderColor: 'rgba(255, 99, 132, 1)',
+                backgroundColor: 'rgba(255, 99, 132, 0.85)',
+                borderWidth: 2
+              }              
+            ]
+          },
+         options: ops
+        });
+      }
+       
+      async function getData() {        
+        const response = await fetch('./sample.csv');
+        const data = await response.text();     
+	const timestamp = [];
+        const temp = [];        
+        const rows = data.split('\n').slice(1);
+        rows.forEach(row => {
+          const col = row.split(',');
+	  timestamp.push(col[0])
+          temp.push(parseFloat(col[1]))
+          //console.log(col[0]) //for debugging purpose
+        });
+        return { temp, timestamp };
+      }
+      //getData(); for debugging purpose
+    </script>
+  </body>
+</html>
