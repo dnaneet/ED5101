@@ -41,12 +41,20 @@
             datasets: [
               {
                 label: 'Temperature (C)',
-                data: dataTemp.humid,		
+                data: dataTemp.temp,		
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.85)',
                 borderWidth: 4
-              }	    
+              },
+	     {
+                label: 'Relative Humidity (%)',
+                data: dataTemp.humid,		
+                fill: false,
+                borderColor: 'rgba(123, 99, 255, 1)',
+                backgroundColor: 'rgba(123, 99, 255, 0.85)',
+                borderWidth: 4
+              }
             ]
           },
          options: ops
