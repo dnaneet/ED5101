@@ -58,7 +58,7 @@
         const data = await response.text();     
 	      const timestamp = [];
         const temp = []; 
-        costant humid = [];
+        const humid = [];
         const rows = data.split('\n').slice(1);
         rows.forEach(row => {
           const col = row.split(',');
