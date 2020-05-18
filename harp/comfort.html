@@ -54,7 +54,7 @@
       }
       */ 
       async function getData() {        
-        const response = await fetch('./sample.csv');
+        const response = await fetch('./20-05-18.data.csv');
         const data = await response.text();     
 	      const timestamp = [];
         const temp = []; 
@@ -65,7 +65,7 @@
 	        timestamp.push(col[3])
           temp.push(parseFloat(col[2]))
           humid.push(parseFloat(col[1]))
-          console.log(praseFloat(col)) //for debugging purpose
+          console.log(parseFloat(col)) //for debugging purpose
         });
         return { temp, timestamp };
       }
