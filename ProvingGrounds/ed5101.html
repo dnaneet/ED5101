@@ -24,7 +24,7 @@
             labels: mydata.date,
             datasets: [
               {
-                label: mydata.task,
+                //label: mydata.task,
                 data: mydata.cumulative,
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
@@ -54,11 +54,11 @@
           date.push(cols[0]);
           task.push(String(cols[2]));
           cumulative.push(parseFloat(cols[3]))
-          console.log(date, task, cumulative)
+          //console.log(date, task, cumulative)
         });
         return { date, task, cumulative };
       }
-      getData()
+      //getData()
     </script>
   </body>
 </html>
