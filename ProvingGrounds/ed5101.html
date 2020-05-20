@@ -22,15 +22,15 @@
 
       async function setup() {
         const ctx = document.getElementById('myChart').getContext('2d');
-        const dataED5101 = await getData();
+        const mydata = await getData();
         const myChart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: dataED5101.date,
+            labels: mydata.date,
             datasets: [
               {
                 label: 'Cumulative Time',
-                data: dataED5101.cumulative,
+                data: mydata.cumulative,
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.85)',
@@ -66,9 +66,9 @@
           cumulative.push(parseFloat(cols[3]))
           //console.log(date, task, cumulative)
         });
-        //return { date, task, cumulative };
+        return { date, task, cumulative };
       }
-      getData()
+      //getData()
     </script>
   </body>
 </html>
