@@ -12,14 +12,9 @@
   </head>
   <body>
     <h1>Student Performance</h1>
-    <canvas id="myChart" width="400" height="200"></canvas>
-
-
-    <script>
-      //List of random names can be generated via: http://listofrandomnames.com/index.cfm?textarea
-      
+    <canvas id="myChart" width="400" height="100"></canvas>
+    <script>            
       window.addEventListener('load', setup);
-
       async function setup() {
         const ctx = document.getElementById('myChart').getContext('2d');
         const mydata = await getData();
