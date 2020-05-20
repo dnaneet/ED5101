@@ -17,20 +17,20 @@
 
     <script>
       //List of random names can be generated via: http://listofrandomnames.com/index.cfm?textarea
-      /*
+      
       window.addEventListener('load', setup);
 
       async function setup() {
         const ctx = document.getElementById('myChart').getContext('2d');
-        const dataScore = await getData();
+        const dataED5101 = await getData();
         const myChart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: dataScore.name,
+            labels: dataED5101.date,
             datasets: [
               {
-                label: 'Problem 1',
-                data: dataScore.q1,
+                label: 'Cumulative Time',
+                data: dataED5101.cumulative,
                 fill: false,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.85)',
@@ -50,7 +50,7 @@
             responsive: true}
         });
       }
-      */
+      
       async function getData() {
         const response = await fetch('./ED5101_time.csv');
         const data = await response.text();
@@ -64,9 +64,9 @@
           date.push(cols[0]);
           task.push(cols[2]);
           cumulative.push(parseFloat(cols[3]))
-          console.log(date, task, cumulative)
+          //console.log(date, task, cumulative)
         });
-        return { date, task, cumulative };
+        //return { date, task, cumulative };
       }
       getData()
     </script>
