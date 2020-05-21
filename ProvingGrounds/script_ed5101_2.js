@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var TITLE = 'Task progress';
+  var TITLE = 'Task progress chart (Hover over data point to view tasks done on that day)';
 
   var POINT_X = 'dayNumber'; // column name for x values in data csv 
   var POINT_X_PREFIX = 'day number-'; // prefix for x values, eg '$'
@@ -11,11 +11,11 @@ $(document).ready(function() {
   var POINT_Y_POSTFIX = ''; // postfix for x values, eg ' kg'
 
   var POINT_NAME = 'task'; // point names that appear in tooltip
-  var POINT_COLOR = 'rgba(123,100,122,0.9)'; // point color, eg `black` or `rgba(10, 100, 44, 0.8)`
-  var POINT_RADIUS = 4; // radius of each data point
+  var POINT_COLOR = 'rgba(255,10,10,0.9)'; // point color, eg `black` or `rgba(10, 100, 44, 0.8)`
+  var POINT_RADIUS = 5; // radius of each data point
 
   var X_AXIS = 'Day Number';  // x-axis label and label in tooltip
-  var Y_AXIS = 'Cumulative time on tasks'; // y-axis label and label in tooltip
+  var Y_AXIS = 'Cumulative time on tasks (minutes)'; // y-axis label and label in tooltip
 
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
