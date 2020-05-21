@@ -43,7 +43,7 @@ $(document).ready(function() {
     var ctx = document.getElementById('container').getContext('2d');
 
     Chart.Scatter(ctx, {
-      type: 'line',	 	    
+      showLine: true,	 	    
       data: scatterChartData,
       options: {
         title: {
