@@ -10,7 +10,7 @@ $(document).ready(function() {
   var POINT_Y_PREFIX = ''; // prefix for x values, eg 'USD '
   var POINT_Y_POSTFIX = ''; // postfix for x values, eg ' kg'
 
-  var POINT_NAME = 'precipitation'; // point names that appear in tooltip
+  var POINT_NAME = 'notes'; // point names that appear in tooltip
   var POINT_COLOR = 'rgba(0,0,255,0.7)'; // point color, eg `black` or `rgba(10, 100, 44, 0.8)`
   var POINT_RADIUS = 5; // radius of each data point
 
