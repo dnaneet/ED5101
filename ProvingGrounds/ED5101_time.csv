@@ -1,37 +1,33 @@
-﻿date,minutes,task,cumulative,timeForDate,
-05/09/2020,4,Personal canvas course page edit,4,31,
-,27,Module 0: introduce yourself,31,,
-,,Module 0: share webpage of design canvas course,31,,
-,,Module 0: Online teaching perception survey,31,,
-,,,31,,
-05/10/2020,40,Module 1: QM pages  rubrics,71,71,40
-,,Editing canvas course webpage to meet Item 1 of QM Higher Learning Rubric,71,,
-,,,71,,
-05/11/2020,40,Module 1: Expected learning outcomes,111,60,
-,10,Module 1: Assessment ,121,,
-,,Module 1: Communication structure section on design canvas course.,121,,
-,,,121,,
-,10,Module-1: Review of QM rubric,131,,
-05/12/2020,7,Creation of modules in design canvas course,138,7,
-05/13/2020,50,Module 1: Read all the material once (personal read),188,122,
-,16,Module 1: Backward design quiz,204,,
-,10,Module 1: QM rubric  criterion 2 (learning objectives),214,214,
-,23,Module 1: TX Tech Workbook Exercises Pre-Design Task,237,,
-,16,Module 1: Creating an instructional analysis (learning goals and subordinate tasks map) FAILED,253,,
-,,,253,,
-05/14/2020,60,Module 1: Recreate Design tasks template in LaTeX,313,90,
-,30,Module 1: Responding to learning objective discussions,343,,
-,,,343,,
-05/15/2020,25,Updating design canvas course with more modules,368,35,
-,10,Module 1: Discussion -- responding to other participants,378,,
-,,,378,,
-05/17/2020,0,None,378,0,
-05/18/2020,5,Module 1: Reading some discussion items,383,5,
-05/19/2020,0,None,383,0,
-05/20/2020,74,Module 2: Reading and Videos,457,160,
-,2,Module 2: Mastery quiz on assessment,459,,
-,18,Module 2: Find formative assessment in gen std 3,477,,
-,20,Module 2: Rough draft of assessment,497,,
-,10,Module 2: Discussion -- initial entry,507,,
-,22,Module 2: Updating the design template,529,,
-,14,Module 2: Populating the design template and modification of rough draft of assessment,543,,
+date,dayNumber,minutes,task,taskString,cumulative,timeForTask
+5/9/2020,1,4,Personal canvas course page edit,"""Personal canvas course page edit""",4,31
+,1,27,Module 0: introduce yourself,"""Module 0: introduce yourself""",31,
+,1,,Module 0: share webpage of design canvas course,"""Module 0: share webpage of design canvas course""",31,
+,1,,Module 0: Online teaching perception survey,"""Module 0: Online teaching perception survey""",31,
+,1,,None,"""None""",31,
+5/10/2020,2,40,"Module 1: QM pages, rubrics","""Module 1: QM pages, rubrics""",71,40
+,2,,Module 1: Editing canvas course webpage to meet Item 1 of QM Higher Learning Rubric,"""Module 1: Editing canvas course webpage to meet Item 1 of QM Higher Learning Rubric""",71,
+5/11/2020,3,40,Module 1: Expected learning outcomes,"""Module 1: Expected learning outcomes""",111,60
+,3,10,Module 1: Assessment ,"""Module 1: Assessment """,121,
+,3,,Module 1: Communication structure section on design canvas course.,"""Module 1: Communication structure section on design canvas course.""",121,
+,3,10,Module-1: Review of QM rubric,"""Module-1: Review of QM rubric""",131,
+5/12/2020,4,7,Creation of modules in design canvas course,"""Creation of modules in design canvas course""",138,7
+5/13/2020,5,50,Module 1: Read all the material once (personal read),"""Module 1: Read all the material once (personal read)""",188,122
+,5,16,Module 1: Backward design quiz,"""Module 1: Backward design quiz""",204,
+,5,10,"Module 1: QM rubric, criterion 2 (learning objectives)","""Module 1: QM rubric, criterion 2 (learning objectives)""",214,
+,5,23,Module 1: TX Tech Workbook Exercises Pre-Design Task,"""Module 1: TX Tech Workbook Exercises Pre-Design Task""",237,
+,5,16,Module 1: Creating an instructional analysis (learning goals and subordinate tasks map) FAILED,"""Module 1: Creating an instructional analysis (learning goals and subordinate tasks map) FAILED""",253,
+5/14/2020,6,60,Module 1: Recreate Design tasks template in LaTeX,"""Module 1: Recreate Design tasks template in LaTeX""",313,90
+,6,30,Module 1: Responding to learning objective discussions,"""Module 1: Responding to learning objective discussions""",343,
+5/15/2020,7,25,Updating design canvas course with more modules,"""Updating design canvas course with more modules""",368,35
+,7,10,Module 1: Discussion -- responding to other participants,"""Module 1: Discussion -- responding to other participants""",378,
+5/17/2020,8,0,None,"""None""",378,0
+5/18/2020,9,5,Module 1: Reading some discussion items,"""Module 1: Reading some discussion items""",383,5
+5/19/2020,10,0,None,"""None""",383,0
+5/20/2020,11,74,Module 2: Reading and Videos,"""Module 2: Reading and Videos""",457,160
+,11,2,Module 2: Mastery quiz on assessment,"""Module 2: Mastery quiz on assessment""",459,
+,11,18,Module 2: Find formative assessment in gen std 3,"""Module 2: Find formative assessment in gen std 3""",477,
+,11,20,Module 2: Rough draft of assessment,"""Module 2: Rough draft of assessment""",497,
+,11,10,Module 2: Discussion -- initial entry,"""Module 2: Discussion -- initial entry""",507,
+,11,22,Module 2: Updating the design template,"""Module 2: Updating the design template""",529,
+,11,14,Module 2: Populating the design template and modification of rough draft of assessment,"""Module 2: Populating the design template and modification of rough draft of assessment""",543,
+5/21/2020,12,21,Module 2: Modifying rough draft of assessment,"""Module 2: Modifying rough draft of assessment""",564,
