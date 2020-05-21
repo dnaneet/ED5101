@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   var POINT_NAME = 'task'; // point names that appear in tooltip
   var POINT_COLOR = 'rgba(0,0,255,0.7)'; // point color, eg `black` or `rgba(10, 100, 44, 0.8)`
-  var POINT_RADIUS = 3; // radius of each data point
+  var POINT_RADIUS = 6; // radius of each data point
 
   var X_AXIS = 'Day Number';  // x-axis label and label in tooltip
   var Y_AXIS = 'Cumulative time on tasks'; // y-axis label and label in tooltip
@@ -30,19 +30,20 @@ $(document).ready(function() {
       }
     })
 
-		var scatterChartData = {
+	var scatterChartData = {
 			datasets: [{
 				label: 'task progress',
 				backgroundColor: POINT_COLOR,
-        data: data,
-        pointRadius: POINT_RADIUS,
-        pointHoverRadius:  POINT_RADIUS + 2,
-			}]
+        			data: data,
+        			pointRadius: POINT_RADIUS,
+        			pointHoverRadius:  POINT_RADIUS + 2,
+				}]
     };
 
     var ctx = document.getElementById('container').getContext('2d');
 
     Chart.Scatter(ctx, {
+      type: 'line',	 	    
       data: scatterChartData,
       options: {
         title: {
