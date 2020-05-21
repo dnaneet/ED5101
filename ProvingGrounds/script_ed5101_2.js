@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var TITLE = 'Task progress';
 
-  var POINT_X = 'date'; // column name for x values in data csv 
+  var POINT_X = 'dayNumber'; // column name for x values in data csv 
   var POINT_X_PREFIX = ''; // prefix for x values, eg '$'
   var POINT_X_POSTFIX = ''; // postfix for x values, eg '%'
 
@@ -10,7 +10,7 @@ $(document).ready(function() {
   var POINT_Y_PREFIX = ''; // prefix for x values, eg 'USD '
   var POINT_Y_POSTFIX = ''; // postfix for x values, eg ' kg'
 
-  var POINT_NAME = 'cumulative'; // point names that appear in tooltip
+  var POINT_NAME = 'task'; // point names that appear in tooltip
   var POINT_COLOR = 'rgba(0,0,255,0.7)'; // point color, eg `black` or `rgba(10, 100, 44, 0.8)`
   var POINT_RADIUS = 3; // radius of each data point
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
   // Read data file and create a chart
-  d3.csv('./ED5101_time.csv').then(function(rows) {
+  d3.csv('./ED5101_data.csv').then(function(rows) {
 
     var data = rows.map(function(row) {
       return {
