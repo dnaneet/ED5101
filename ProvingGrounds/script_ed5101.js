@@ -56,7 +56,10 @@ $(document).ready(function() {
         scales: {
           xAxes: [{
     	    type: 'time',
-	    time: {unit: 'day'},	  
+	    time: {
+		    unit: 'day',
+		    displayFormats: {'YYYY-MM-DD'}
+	    },	  
             scaleLabel: {
               display: true,
               labelString: X_AXIS
