@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var TITLE = 'ED5101 progress';
+  var TITLE = 'Task progress';
 
   var POINT_X = 'date'; // column name for x values in data csv 
   var POINT_X_PREFIX = ''; // prefix for x values, eg '$'
@@ -15,7 +15,7 @@ $(document).ready(function() {
   var POINT_RADIUS = 3; // radius of each data point
 
   var X_AXIS = 'Date';  // x-axis label and label in tooltip
-  var Y_AXIS = 'Cumulative time on ED5101'; // y-axis label and label in tooltip
+  var Y_AXIS = 'Cumulative time on tasks'; // y-axis label and label in tooltip
 
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 		var scatterChartData = {
 			datasets: [{
-				label: 'ED5101 progress',
+				label: 'task progress',
 				backgroundColor: POINT_COLOR,
         data: data,
         pointRadius: POINT_RADIUS,
