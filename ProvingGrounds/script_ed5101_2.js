@@ -37,13 +37,13 @@ $(document).ready(function() {
         			data: data,
         			pointRadius: POINT_RADIUS,
         			pointHoverRadius:  POINT_RADIUS + 2,
+				showLine: true
 				}]
     };
 
     var ctx = document.getElementById('container').getContext('2d');
 
-    Chart.Scatter(ctx, {
-      showLine: true,	 	    
+    Chart.Scatter(ctx, {      	 	    
       data: scatterChartData,
       options: {
         title: {
