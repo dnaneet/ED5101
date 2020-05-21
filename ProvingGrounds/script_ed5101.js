@@ -2,25 +2,25 @@ $(document).ready(function() {
 
   var TITLE = 'ED5101 progress';
 
-  var POINT_X = 'month'; // column name for x values in data.csv
+  var POINT_X = 'date'; // column name for x values in data csv 
   var POINT_X_PREFIX = ''; // prefix for x values, eg '$'
-  var POINT_X_POSTFIX = ' (number)'; // postfix for x values, eg '%'
+  var POINT_X_POSTFIX = ''; // postfix for x values, eg '%'
 
-  var POINT_Y = 'temperature'; // column name for y values in data.csv
+  var POINT_Y = 'cumulative'; // column name for y values in data.csv
   var POINT_Y_PREFIX = ''; // prefix for x values, eg 'USD '
   var POINT_Y_POSTFIX = ''; // postfix for x values, eg ' kg'
 
-  var POINT_NAME = 'precipitation'; // point names that appear in tooltip
+  var POINT_NAME = 'task'; // point names that appear in tooltip
   var POINT_COLOR = 'rgba(0,0,255,0.7)'; // point color, eg `black` or `rgba(10, 100, 44, 0.8)`
-  var POINT_RADIUS = 5; // radius of each data point
+  var POINT_RADIUS = 3; // radius of each data point
 
-  var X_AXIS = 'Month Number';  // x-axis label and label in tooltip
-  var Y_AXIS = 'Temperature'; // y-axis label and label in tooltip
+  var X_AXIS = 'Date';  // x-axis label and label in tooltip
+  var Y_AXIS = 'Cumulative time on ED5101'; // y-axis label and label in tooltip
 
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
   // Read data file and create a chart
-  d3.csv('./precipitation.csv').then(function(rows) {
+  d3.csv('./ED5101_time.csv').then(function(rows) {
 
     var data = rows.map(function(row) {
       return {
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 		var scatterChartData = {
 			datasets: [{
-				label: 'Temperature and precipitation',
+				label: 'ED5101 progress',
 				backgroundColor: POINT_COLOR,
         data: data,
         pointRadius: POINT_RADIUS,
