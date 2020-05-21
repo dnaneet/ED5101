@@ -14,13 +14,13 @@ $(document).ready(function() {
   var POINT_COLOR = 'rgba(0,0,255,0.7)'; // point color, eg `black` or `rgba(10, 100, 44, 0.8)`
   var POINT_RADIUS = 3; // radius of each data point
 
-  var X_AXIS = 'Date';  // x-axis label and label in tooltip
+  var X_AXIS = 'Day Number';  // x-axis label and label in tooltip
   var Y_AXIS = 'Cumulative time on tasks'; // y-axis label and label in tooltip
 
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
   // Read data file and create a chart
-  d3.csv('./time_series.csv').then(function(rows) {
+  d3.csv('./time_series_2.csv').then(function(rows) {
 
     var data = rows.map(function(row) {
       return {
