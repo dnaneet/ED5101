@@ -56,6 +56,7 @@ $(document).ready(function() {
         scales: {
           xAxes: [{
     	    type: 'time',
+	    distribution: 'series',		  
             scaleLabel: {
               display: true,
               labelString: X_AXIS
