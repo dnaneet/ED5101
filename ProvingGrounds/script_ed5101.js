@@ -20,7 +20,7 @@ $(document).ready(function() {
   var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
   // Read data file and create a chart
-  d3.csv('./ED5101_time.csv').then(function(rows) {
+  d3.csv('./time_series_2.csv').then(function(rows) {
 
     var data = rows.map(function(row) {
       return {
