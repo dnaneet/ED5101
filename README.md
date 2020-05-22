@@ -9,3 +9,5 @@ Test Repo to experiment with ChartJS
 
   - Bullet point
   - Bullet point
+  
+  $$\frac{dy}{dx}$$
